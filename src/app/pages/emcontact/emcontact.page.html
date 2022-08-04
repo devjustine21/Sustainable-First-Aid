@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Emergency Contacts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <ion-list>
+    <ion-item *ngFor="let note of notes" (click)="openNote(note)">
+      <ion-label>
+        {{ note.title }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+ 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+
+</ion-content>
+<ion-footer color="danger">
+  <ion-toolbar position="bottom" color="danger">
+    <div class="ion-text-center">
+      <ion-button color="danger"(click)="call()" >CALL EMERGENCY SERVICES</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

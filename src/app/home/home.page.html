@@ -1,0 +1,82 @@
+<script type="module">
+  import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+  window.menuController = menuController;
+</script>
+<ion-menu side="start" content-id="main-content">
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-title>Menu</ion-title>
+ 
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item routerLink="/about">
+      <ion-icon name="bandage" slot="start"></ion-icon>
+      <ion-label>About Us</ion-label>
+    </ion-item>
+    <ion-item routerLink="/emcontact">
+      <ion-icon name="paper-plane" slot="start"></ion-icon>
+      <ion-label>Emergency Contacts</ion-label>
+    </ion-item>
+    <ion-item routerLink="/volunteers">
+      <ion-icon name="heart" slot="start"></ion-icon>
+      <ion-label>Red Cross Volunteers</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color ="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-button size="small" color="danger" fill="solid"slot="end" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+
+      <ion-title size="Large" style="text-align:center;">Sustainable First Aid</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-card>
+      <ion-grid>
+          <ion-row class="ion-text-center">
+              <ion-col size="4" routerLink="/first-aid-basics">
+                  <ion-icon name="star" color="danger" size="large"></ion-icon>
+                  <p>First Aid Basics</p>
+              </ion-col>
+              <ion-col size="4" routerLink="/cpr">
+                  <ion-icon name="bag-add" color="tertiary" size="large"></ion-icon>
+                  <p>CPR</p>
+              </ion-col>
+              <ion-col size="4" routerLink="/common-incidents">
+                  <ion-icon name="home" color="danger" size="large"></ion-icon>
+                  <p>Common Incidents</p>
+              </ion-col>
+          </ion-row>
+          <ion-row class="ion-text-center">
+            <ion-col size="4" routerLink="/environmental-incidents">
+                <ion-icon name="leaf" color="tertiary" size="large"></ion-icon>
+                <p>Outdoor Incidents</p>
+            </ion-col>
+            <ion-col size="4" routerLink="/serious-incidents">
+                <ion-icon name="help-buoy" color="danger" size="large"></ion-icon>
+                <p>Serious Incidents</p>
+            </ion-col>
+            <ion-col size="4" routerLink="/preventive-measures">
+                <ion-icon name="checkbox" color="tertiary" size="large"></ion-icon>
+                <p>Preventive Measures</p>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+  <ion-card style="box-shadow: none;">
+    <ion-card-content>
+      <ion-img src="/assets/images/firstaidlogo.png"></ion-img>
+    </ion-card-content>
+  </ion-card>
+  
+  </ion-content>
+  

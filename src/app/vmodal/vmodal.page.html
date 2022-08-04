@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <div *ngIf="product">
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]="product.name"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="stacked">Number</ion-label>
+      <ion-textarea [(ngModel)]="product.number"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea [(ngModel)]="product.description"></ion-textarea>
+    </ion-item>
+  </div>
+ 
+  
+ 
+</ion-content> 

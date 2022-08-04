@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-ed60f": {
+      "hosting": {
+        "app": [
+          "test-ed60f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-ed60f"
+  }
+}
